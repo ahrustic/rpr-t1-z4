@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.tutorijal1;
 
 import java.util.*;
 
-class Student {
+ class Student {
     static String imeStudenta, prezimeStudenta;
     static int brojIndeksaStudenta;
 
@@ -46,8 +46,8 @@ class Student {
         this.brojIndeksaStudenta = noviStudent.dajBrojIndeksaStudenta();
     }
 
-    void ispisi(Student student) {
-        System.out.print(student.dajPrezimeStudenta() + " " + student.dajImeStudenta() + " (" + student.dajBrojIndeksaStudenta() + ")");
+    void ispisi() {
+        System.out.print(this.dajPrezimeStudenta() + " " + this.dajImeStudenta() + " (" + this.dajBrojIndeksaStudenta() + ")");
     }
 };
 
@@ -105,18 +105,18 @@ class Predmet {
         sifraPredmeta = "";
     }
 
-    void promjeniNazivStudenta(Predmet noviPredmet) {
+    void promjeniNazivPredmeta(Predmet noviPredmet) {
         this.nazivPredmeta = noviPredmet.dajNazivPredmeta();
     }
 
-    void promjeniSifruStudenta(Predmet noviPredmet) {
+    void promjeniSifruPredmeta(Predmet noviPredmet) {
         this.sifraPredmeta = noviPredmet.dajSifruPredmeta();
     }
 
     void ispisStudenteNaPredmetu() {
         for (int i = 0; i < trenutniBrojStudenataNaPredmetu; i++) {
             System.out.print(i + 1 + ". ");
-            nizStudenata[i].ispisi(nizStudenata[i]);
+            nizStudenata[i].ispisi();
         }
     }
 };
@@ -125,7 +125,7 @@ public class Program {
 
     public static void main(String[] args) {
         Predmet noviPredmet = new Predmet("Razvoj programskih rješenja", "RPR", 150);
-        Student noviStudent = new Student("Perica", "Peric", 18101);
+        Student noviStudent = new Student("Mujo", "Mujic", 12345);
         noviPredmet.upisi(noviStudent);
         noviPredmet.ispisStudenteNaPredmetu();
         noviPredmet.ispisani(noviStudent);
