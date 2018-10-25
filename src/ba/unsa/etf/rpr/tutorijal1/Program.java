@@ -3,17 +3,17 @@ package ba.unsa.etf.rpr.tutorijal1;
 import java.util.*;
 
  class Student {
-    static String imeStudenta, prezimeStudenta;
-    static int brojIndeksaStudenta;
+     String imeStudenta, prezimeStudenta;
+     int brojIndeksaStudenta;
 
     Student(String imeStudentaKojegUnosimo, String prezimeStudentaKojegUnosimo, int brojIndeksaStudentaKojegUnosimo) {
         postavi(imeStudentaKojegUnosimo, prezimeStudentaKojegUnosimo, brojIndeksaStudentaKojegUnosimo);
     }
 
     void postavi(String imeStudentaKojegUnosimo, String prezimeStudentaKojegUnosimo, int brojIndeksaStudentaKojegUnosimo) {
-        Student.imeStudenta = imeStudentaKojegUnosimo;
-        Student.prezimeStudenta = prezimeStudentaKojegUnosimo;
-        Student.brojIndeksaStudenta = brojIndeksaStudentaKojegUnosimo;
+        this.imeStudenta = imeStudentaKojegUnosimo;
+        this.prezimeStudenta = prezimeStudentaKojegUnosimo;
+        this.brojIndeksaStudenta = brojIndeksaStudentaKojegUnosimo;
     }
 
     void obrisiStudenta() {
@@ -52,9 +52,9 @@ import java.util.*;
 };
 
 class Predmet {
-    static String nazivPredmeta, sifraPredmeta;
-    static int maksimalanBrojStudenata;
-    static private Student[] nizStudenata;
+     String nazivPredmeta, sifraPredmeta;
+     int maksimalanBrojStudenata;
+     private Student[] nizStudenata;
     private int trenutniBrojStudenataNaPredmetu;
 
     Predmet(String nazivPredmetaKojiUnosimo, String sifraPredmetaKojiUnosimo, int makismalanBrojStudenataNaPredmetu) {
@@ -63,9 +63,9 @@ class Predmet {
     }
 
     void postavi(String nazivPredmetaKojiUnosimo, String sifraPredmetaKojiUnosimo, int maksimalanBrojStudenataNaPredmetu) {
-        Predmet.nazivPredmeta = nazivPredmetaKojiUnosimo;
-        Predmet.sifraPredmeta = sifraPredmetaKojiUnosimo;
-        Predmet.maksimalanBrojStudenata = maksimalanBrojStudenataNaPredmetu;
+        this.nazivPredmeta = nazivPredmetaKojiUnosimo;
+        this.sifraPredmeta = sifraPredmetaKojiUnosimo;
+        this.maksimalanBrojStudenata = maksimalanBrojStudenataNaPredmetu;
     }
 
     void upisi(Student noviStudent) {
