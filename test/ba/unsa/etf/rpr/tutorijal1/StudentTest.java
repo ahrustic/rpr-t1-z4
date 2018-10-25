@@ -65,51 +65,51 @@ class StudentTest {
     @Test
     void promjeniImeStudenta() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        novi.promjeniImeStudenta((new Student ("Janko", "Janic", 56889));
+        novi.promjeniImeStudenta((new Student ("Janko", "Janic", 56889)));
         assertEquals("Maja Mujic 12345",novi.toString());
     }
 
     @Test
-    void testPostaviImeNeispravan() {
+    void testPostaviImePredmetaNeispravan() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        assertThrows(IllegalArgumentException.class, () -> {novi.promjeniImeStudenta((new Student ("Janko", "Janic", 56889));});
+        assertThrows(IllegalArgumentException.class, () -> novi.promjeniImeStudenta((new Student ("Janko", "Janic", 56889))));
     }
 
     @Test
     void promjeniPrezimeStudenta() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        novi.promjeniPrezimeStudenta((new Student ("Janko", "Janic", 56889));
+        novi.promjeniPrezimeStudenta((new Student ("Janko", "Janic", 56889)));
         assertEquals("Mujo Mujica 12345",novi.toString());
     }
 
     @Test
     void testPostaviPrezimeNeispravan() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        assertThrows(IllegalArgumentException.class, () -> {novi.promjeniPrezimeStudenta((new Student ("Janko", "Janic", 56889));});
+        assertThrows(IllegalArgumentException.class, () -> novi.promjeniPrezimeStudenta((new Student ("Janko", "Janic", 56889))));
     }
 
     @Test
     void promjeniBrojIndeksaStudenta() {
-        Student novi = new Student("Mujo", "Mujic", 12345);
-        novi.promjeniBrojIndeksaStudenta((new Student ("Janko", "Janic", 56889));
-        assertEquals("Mujo Mujic 54321",novi.toString());
+        Student noviPredmet = new Student("Mujo", "Mujic", 12345);
+        noviPredmet.promjeniBrojIndeksaStudenta((new Student ("Janko", "Janic", 56889)));
+        assertEquals("Mujo Mujic 54321",noviPredmet.toString());
     }
 
     @Test
     void testPostaviBrojIndexaNeispravan() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        assertThrows(IllegalArgumentException.class, () -> {novi.promjeniBrojIndeksaStudenta(new Student("Mujo", "Mujic", 99999));});
+        assertThrows(IllegalArgumentException.class, () -> novi.promjeniBrojIndeksaStudenta(new Student("Mujo", "Mujic", 99999)));
     }
 
     @Test
     void testPostaviImeNeispravan() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        assertThrows(IllegalArgumentException.class, () -> {novi.promjeniBrojIndeksaStudenta((new Student ("Janko", "Janic", 56889));});
+        assertThrows(IllegalArgumentException.class, () -> novi.promjeniBrojIndeksaStudenta((new Student ("Janko", "Janic", 56889))));
     }
 
     @Test
     void ispisiNeispravno() {
         Student novi = new Student("Mujo", "Mujic", 12345);
-        assertThrows(IllegalArgumentException.class, () -> {novi.ispisi();});
+        assertThrows(IllegalArgumentException.class, () -> novi.ispisi());
     }
 }
